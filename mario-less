@@ -1,0 +1,29 @@
+#include <cs50.h>
+#include <stdio.h>
+
+ int main (void)
+{
+    int n;
+
+    // Ask for height
+    do
+    {
+        n = get_int("Height: ");
+    //Condition
+    }while ( n < 1 || n > 8 );
+
+    //Printing # and " "
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= n - 1; j++)
+         {
+             // Assigning # or " " in the grill
+             if(i + j < n -1)
+                printf(" ");
+             else
+                printf("#");
+         }
+         // Move to next line
+        printf("\n");
+    }
+}
